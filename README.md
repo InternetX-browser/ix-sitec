@@ -30,4 +30,5 @@ But...
 
 <div class="but_down" align="center">
 <h3>For more information read the wiki on GitHub! :bowtie:</h3>
+<a href="https://github.com/InternetX-browser/ix-sitec/wiki">Click here!</a>
 </div>
