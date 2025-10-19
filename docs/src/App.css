@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.exampleone {
+  background-color:red
+}
+
+table {
+    border: 2px solid gray;
+    width: 800px;
+    height: 200px;
+}
+
+th {
+    border-bottom: 1px solid white;
+}
+
+td {
+    text-align: center;
+}
