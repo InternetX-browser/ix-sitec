@@ -1,6 +1,6 @@
 import './App.css';
 import {Link} from 'react-router';
-import Tooltip from './components/Tooltip';
+import LinkCreate from './components/short_names/LinkCreate';
 
 function App() {
   const mainnamedescription = "Create your own sites"
@@ -28,7 +28,7 @@ function App() {
       <div className="App-texts" align="center">
         <p>{mainnamedescription}</p>
         <p>{maindescription}</p>
-        <Link to="/create"><button type="button">+ Create</button></Link>
+        <LinkCreate><button type="button">+ Create</button></LinkCreate>
         <button type="button" onClick={() => alert('In development!')}>Group Messeger</button>
         <a href="https://github.com/InternetX-browser/ix-sitec"><button type="button">Source Code</button></a>
       </div>
@@ -129,7 +129,7 @@ function App() {
     </div>
     <div className="end">
       <h1>Interested to create? Click here:</h1>
-      <Link to="/create"><button type="button">+ Create</button></Link>
+      <LinkCreate><button type="button">+ Create</button></LinkCreate>
     </div>
     </div>
   );
