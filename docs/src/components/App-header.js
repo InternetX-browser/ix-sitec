@@ -7,12 +7,17 @@ const mainname2 = "Site Creator"
 const AppHeader = () => {
     return (
         <header><div className="HEAD-header">
+            <Link to="/"><img src="../ix-sitec-logo.png" width="64px" height="64px"/></Link>
             <p>{mainname1}</p><br/>
             <Link to="/"><p>{mainname2}</p></Link>
             <div className="configure-figures">
-                <div className="new">
-                <Tooltip text="Create">
-                <Link to="/create"><img src="./figure/create_repo.svg"/></Link>
+                <div className="figures">
+                <Link to="/create"><img src="./figure/create_repo.svg" alt="Create"/></Link>
+                <Tooltip text="Wiki">
+                    <a href="https://github.com/InternetX-browser/ix-sitec/wiki/" ><img src="./figure/wiki.svg"/></a>
+                </Tooltip>
+                <Tooltip text="Source Code">
+                    <a href="https://github.com/InternetX-browser/ix-sitec"><img src="./figure/source-code.svg"/></a>
                 </Tooltip>
                 </div>
             </div>

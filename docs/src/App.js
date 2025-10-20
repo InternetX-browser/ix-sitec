@@ -1,6 +1,6 @@
-import AppHeader from './components/App-header';
 import './App.css';
-import {Link} from 'react-router'
+import {Link} from 'react-router';
+import Tooltip from './components/Tooltip';
 
 function App() {
   const mainnamedescription = "Create your own sites"
@@ -68,10 +68,9 @@ function App() {
         <h2>Other example</h2>
 
         <div className="example2">
-          <div className="NOTE">
-            <p>NOTE: This solo functions with the .SLASH InternetX extension installed.</p>
-          </div>
-          <p>Code:</p>
+
+            <button type="button" onClick={() => alert('This code solo functions with the .SLASH InternetX extension installed.')}>Click me please.</button><br/>
+
           <code>{doctype1}</code><br/>
           <code>{dwcb_part1}</code><br/>
           <code>{dwcb_part2}</code><br/>
