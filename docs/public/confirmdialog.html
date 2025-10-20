@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>  
+<title>Configuration for Index.HTML: ?lesson=confirmdialog</title>
+<style>
+    
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+  background-color:white;
+}
+
+</style>
+</html>
+
+<body>
+    <div class="page">
+        <button onclick="showConfirmation()">Please submit!</button>
+        <h1>Back</h1>
+        <p><span style="color:green">NOTE</span>: The elements from "Back" doens't appear in the code or displays.</p>
+        <a href="./"><button><- Back</button></a>
+    </div>
+</body>
+
+<script>
+        function showConfirmation() {
+            let userConfirmed = confirm("You have watermelons?");
+
+            if (userConfirmed) {
+                
+                alert('Good. I like watermelons :)')
+
+            } else {
+                alert('Ok.')
+            }
+        }
+    </script>
+
+
