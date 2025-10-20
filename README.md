@@ -32,3 +32,7 @@ But...
 <h3>For more information read the wiki on GitHub! :bowtie:</h3>
 <a href="https://github.com/InternetX-browser/ix-sitec/wiki">Click here!</a>
 </div>
+
+## Current version
+
+Our current version is: `1.0.1`
