@@ -35,4 +35,4 @@ But...
 
 ## Current version
 
-Our current version is: `1.0.1`
+Our current version is: `1.0.1.1`
