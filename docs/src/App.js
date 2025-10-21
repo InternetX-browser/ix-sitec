@@ -1,7 +1,6 @@
 import './App.css';
 import LinkCreate from './components/short_names/LinkCreate';
 import Note from './components/zSuite-note';
-import Tooltip from './components/Tooltip';
 
 function App() {
   const mainnamedescription = "Create your own sites"
