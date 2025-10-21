@@ -1,6 +1,7 @@
 import './App.css';
-import {Link} from 'react-router';
 import LinkCreate from './components/short_names/LinkCreate';
+import Note from './components/zSuite-note';
+import Tooltip from './components/Tooltip';
 
 function App() {
   const mainnamedescription = "Create your own sites"
@@ -83,7 +84,9 @@ function App() {
 
           <p>Result:</p>
 
-          <a href="./confirmdialog.html"><button type="button">You need to click here for observe :(</button></a>
+          <a href="./confirmdialog.html"><button type="button">You need to click here for observe :(</button></a><br/>
+          <Note text="This button not appears. Click this button for the real result."></Note>
+          
 
           <p>Table for know:</p>
 
