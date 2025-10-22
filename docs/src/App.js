@@ -129,6 +129,10 @@ function App() {
           </table>
         </div>
     </div>
+    <div className="CoolButton">
+      <p>Cool example</p>
+      <button type="button" onClick={() => alert('COOL BUTTON PAGE!')} className="CoolButton-detail">START</button>
+    </div>
     <div className="end">
       <h1>Interested to create? Click here:</h1>
       <LinkCreate><button type="button">+ Create</button></LinkCreate>

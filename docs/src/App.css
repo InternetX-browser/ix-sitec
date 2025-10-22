@@ -64,4 +64,15 @@ td {
   font-style: italic;
   font-weight: 100 900;
   font-display: swap;
+  cursor: context-menu;
+}
+
+.CoolButton {
+  cursor: url(../public/cursors/default_arrow.cur),auto;
+  background-color:chartreuse;
+  color:black;
+}
+
+.CoolButton-detail {
+  cursor: url(../public/cursors/default_link.cur),auto;
 }
