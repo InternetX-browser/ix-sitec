@@ -1,0 +1,6 @@
+.AppCreateContent {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    height: calc(100dvh - 205px);
+}

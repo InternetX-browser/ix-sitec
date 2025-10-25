@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <div className="App-image">
-      <img src="https://raw.githubusercontent.com/InternetX-browser/ix_assets/refs/heads/main/assets/explorer/sitec/internetx_siteclogo.png"/>
+        <img src="https://raw.githubusercontent.com/InternetX-browser/ix_assets/refs/heads/main/assets/explorer/sitec/internetx_siteclogo.png" />
       </div>
       <div className="App-texts" align="center">
         <p>{mainnamedescription}</p>
@@ -35,13 +35,13 @@ function App() {
       <div className="App-examples" align="center">
         <h1>Examples</h1>
         <div className="App-example1" align="center">
-        <code>{doctype}</code>
-        <code>{demowithmsgbox_part1}</code>
-        <code>{demowithmsgbox_part2}</code>
-        <br/>
-        <br/>
+          <code>{doctype}</code>
+          <code>{demowithmsgbox_part1}</code>
+          <code>{demowithmsgbox_part2}</code>
+          <br />
+          <br />
         </div>
-         
+
         Table for know:
 
 
@@ -69,23 +69,23 @@ function App() {
 
         <div className="example2">
 
-            <button type="button" onClick={() => alert('This code solo functions with the .SLASH InternetX extension installed.')}>Click me please.</button><br/>
+          <button type="button" onClick={() => alert('This code solo functions with the .SLASH InternetX extension installed.')}>Click me please.</button><br />
 
-          <code>{doctype1}</code><br/>
-          <code>{dwcb_part1}</code><br/>
-          <code>{dwcb_part2}</code><br/>
-          <code>{dwcb_part3}</code><br/>
-          <code>{dwcb_part4}</code><br/>
-          <code>{dwcb_part5}</code><br/>
-          <code>{dwcb_part6}</code><br/>
-          <code>{doctype}</code><br/>
-          <code>{dwcb_part7}</code><br/>
+          <code>{doctype1}</code><br />
+          <code>{dwcb_part1}</code><br />
+          <code>{dwcb_part2}</code><br />
+          <code>{dwcb_part3}</code><br />
+          <code>{dwcb_part4}</code><br />
+          <code>{dwcb_part5}</code><br />
+          <code>{dwcb_part6}</code><br />
+          <code>{doctype}</code><br />
+          <code>{dwcb_part7}</code><br />
 
           <p>Result:</p>
 
-          <a href="./confirmdialog.html"><button type="button">You need to click here for observe :(</button></a><br/>
+          <a href="./confirmdialog.html"><button type="button">You need to click here for observe :(</button></a><br />
           <Note text="This button not appears. Click this button for the real result."></Note>
-          
+
 
           <p>Table for know:</p>
 
@@ -128,15 +128,15 @@ function App() {
             </tr>
           </table>
         </div>
-    </div>
-    <div className="CoolButton">
-      <p>Cool example</p>
-      <button type="button" onClick={() => alert('COOL BUTTON PAGE!')} className="CoolButton-detail">START</button>
-    </div>
-    <div className="end">
-      <h1>Interested to create? Click here:</h1>
-      <LinkCreate><button type="button">+ Create</button></LinkCreate>
-    </div>
+      </div>
+      <div className="CoolButton">
+        <p>Cool example</p>
+        <button type="button" onClick={() => alert('COOL BUTTON PAGE!')} className="CoolButton-detail">START</button>
+      </div>
+      <div className="end">
+        <h1>Interested to create? Click here:</h1>
+        <LinkCreate><button type="button">+ Create</button></LinkCreate>
+      </div>
     </div>
   );
 }

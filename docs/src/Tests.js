@@ -3,10 +3,6 @@ import Note from './components/zSuite-note';
 import React, { useState } from 'react';
 
 function Tests() {
-    const [isChecked, setIsChecked] = useState(false);
-    const handleChange = (event) => {
-        setIsChecked(event.target.checked);
-      };
 
     return (
         <div className="Tests">
