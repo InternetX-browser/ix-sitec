@@ -1,6 +1,7 @@
 import './App.css';
 import LinkCreate from './components/short_names/LinkCreate';
 import Note from './components/zSuite-note';
+import Footer from './components/Footer';
 
 function App() {
   const mainnamedescription = "Create your own sites"
@@ -20,10 +21,12 @@ function App() {
   const dwcb_part6 = ".SLASH func.config ConfirmBox.as.text='You have watermelons?'"
   const dwcb_part7 = "<raw type='button' OnUserInteraction='click: .SLASH run.func.name='ConfirmBox'' text='Please submit!'>"
 
+  // RETURN
+
   return (
     <div className="App">
       <div className="App-image">
-        <img src="https://raw.githubusercontent.com/InternetX-browser/ix_assets/refs/heads/main/assets/explorer/sitec/internetx_siteclogo.png" />
+        <img src="https://d3q286erl8dnhb.cloudfront.net/q9ljay%2Fpreview%2F72143841%2Fmain_large.png?response-content-disposition=inline%3Bfilename%3D%22main_large.png%22%3B&response-content-type=image%2Fpng&Expires=1761523629&Signature=diuVNtB~K5e1jyi3LAr0eggLBSxqDC2YB97b4geE-qMMJiq1X864ZJSt~z8lXd-CFDH2V73QuY5I10e6tq-suiG79STti5qYkp~Fzb7zEEtEaUlKSGgMxtd3XOK4ksHQ2tmLaTBd3R3D7ob3vzOgDqWfxGNZ1Nc8~xyn-yL4alpWJ03z1cZGTimLI9jQNIdEsSiaNOTfXWft-q9m4bfKD1z7gcU7c9HoVS35zae9J-ECCH6Xf3yIJw0RfUC2i4qD8UmDO52VOJkhtEG9aVdJUeoKonJr~Tr1p4uJOC6zwvO9Y8TBWqP3-rw8VB4k9JDpj7O2EInKFZw-jj8twGhCtg__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ" />
       </div>
       <div className="App-texts" align="center">
         <p>{mainnamedescription}</p>
@@ -137,6 +140,7 @@ function App() {
         <h1>Interested to create? Click here:</h1>
         <LinkCreate><button type="button">+ Create</button></LinkCreate>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
