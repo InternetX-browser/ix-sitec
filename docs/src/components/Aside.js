@@ -1,12 +1,13 @@
 import './styles/Aside.css';
 import { useState, useEffect } from 'react';
 
-const forbiddenNames = ["con", "aux", "prn", "fuck", "shit"]
+const forbiddenNames = ["con", "aux", "prn", "fuck", "shit", "shit.web", "fuck.web", "shit.cr", "fuck.cr", "shit.market", "shit.w", "shit.mrkt", "fuck.market", "fuck.w", "fuck.c", "shit.c", "shit.doc", "fuck.doc", "shit.documentation", "fuck.documentation", "blood"]
 
-const Aside = ({ files, onSelectFile }) => {
+const Aside = ({ files, onSelectFile, onStart, onReset }) => {
     const [isInputVisible, setIsInputVisible] = useState(false);
     const [inputValue, setInputValue] = useState("");
     const [isSaved, setIsSaved] = useState(false);
+    const [isNpPanel, setIsNpPanel] = useState(false);
 
     useEffect(() => {
         const localStorageValue = localStorage.getItem('app_create_site_name');
@@ -35,6 +36,7 @@ const Aside = ({ files, onSelectFile }) => {
                                 } else {
                                     setIsSaved(true);
                                     localStorage.setItem('app_create_site_name', inputValue);
+                                    onStart();
                                 }
                             }}>Save</button>
                             <button type="button" onClick={() => {
@@ -49,7 +51,15 @@ const Aside = ({ files, onSelectFile }) => {
                                     setIsInputVisible(false);
                                     setIsSaved(false);
                                     setInputValue("");
+                                    onReset();
                                 }}>Reset</button>
+                                    <button type="button" onClick={() => {
+                                    localStorage.clear()
+                                    setIsInputVisible(false);
+                                    setIsSaved(false);
+                                    setInputValue("");
+                                    onReset();
+                                }}>Start new project</button>
                             </div>
                         )
                     )}

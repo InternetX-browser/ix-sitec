@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 function AppCreate() {
 
     const [files, setFiles] = useState();
+    const [isStarted, setIsStarted] = useState(localStorage.getItem('app_create_site_name') != null);
 
     useEffect(() => {
         const savedFiles = JSON.parse(localStorage.getItem('app_create_content'));
@@ -40,8 +41,6 @@ function AppCreate() {
         return null;
     }
 
-    console.log("--- files", files);
-
     return (
         <div className="AppCreate">
             <AppHeader></AppHeader>
@@ -57,8 +56,8 @@ function AppCreate() {
                             return file;
                         })
                     });
-                }}></Aside>
-                <Content file={files.find(file => file.isSelected === true)} onChange={(value) => {
+                }} onStart={()=>{setIsStarted(true)}} onReset={()=>setIsStarted(false)}></Aside>
+              {isStarted ?  <Content file={files.find(file => file.isSelected === true)} onChange={(value) => {
 
                     setFiles(prev => {
                         return prev.map(file => {
@@ -70,7 +69,7 @@ function AppCreate() {
                     });
                 }} onSave={
                     localStorage.setItem("app_create_content", JSON.stringify(files))
-                }></Content>
+                }></Content>:'Start new project'}
             </div>
             <Footer></Footer>
         </div>
