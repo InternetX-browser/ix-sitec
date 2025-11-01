@@ -35,4 +35,4 @@ But...
 
 ## Current version
 
-Our current version is: `1.0.4.2` (Data from [releases](https://github.com/InternetX-browser/ix-sitec/releases))
+Our current version is: `1.0.4.3` (Data from [releases](https://github.com/InternetX-browser/ix-sitec/releases))

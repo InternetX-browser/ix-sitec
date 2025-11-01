@@ -1,3 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
+# ROBOTS.TXT
 User-agent: *
-Disallow:
+Disallow: /tests

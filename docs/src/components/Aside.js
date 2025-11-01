@@ -36,7 +36,7 @@ const Aside = ({ files, onSelectFile, onStart, onReset }) => {
                                 } else {
                                     setIsSaved(true);
                                     localStorage.setItem('app_create_site_name', inputValue);
-                                    onStart();
+                                    onStart(inputValue);
                                 }
                             }}>Save</button>
                             <button type="button" onClick={() => {

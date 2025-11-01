@@ -5,18 +5,7 @@ import { useState, useEffect } from 'react';
 import Content from './components/Content';
 import Footer from './components/Footer';
 
-function AppCreate() {
-
-    const [files, setFiles] = useState();
-    const [isStarted, setIsStarted] = useState(localStorage.getItem('app_create_site_name') != null);
-
-    useEffect(() => {
-        const savedFiles = JSON.parse(localStorage.getItem('app_create_content'));
-
-        if (savedFiles?.length) {
-            setFiles(savedFiles);
-        } else {
-            setFiles([
+const defaultFiles = [
                 {
                     id: 'file_1',
                     name: "page",
@@ -33,9 +22,40 @@ function AppCreate() {
                     image: "./figure/file.svg",
                     isSelected: false
                 }
-            ])
+            ];
+
+function AppCreate() {
+
+    const [files, setFiles] = useState();
+    const [isStarted, setIsStarted] = useState(localStorage.getItem('app_create_site_name') != null);
+
+    useEffect(() => {
+        const savedFiles = JSON.parse(localStorage.getItem('app_create_content'));
+
+        if (savedFiles?.length) {
+            setFiles(savedFiles);
+        } else {
+            setFiles(defaultFiles)
         }
     }, []);
+
+    const handleOnStart = (siteName) => {
+        setIsStarted(true);
+        if (siteName === "funduk.web") {
+            setFiles((prev) => {
+                return [...prev, {
+                    id: 'funduk',
+                    name: "funduk",
+                    extension: "txt",
+                    content: "Woof! Woof!",
+                    image: "./figure/corgi.svg",
+                    isSelected: false
+                }]
+            })
+        } else {
+            setFiles (defaultFiles) 
+        }
+    }
 
     if (!files) {
         return null;
@@ -45,31 +65,39 @@ function AppCreate() {
         <div className="AppCreate">
             <AppHeader></AppHeader>
             <div className='AppCreateContent'>
-                <Aside files={files} onSelectFile={(fileId) => {
-                    setFiles(prev => {
-                        return prev.map(file => {
-                            if (file.id === fileId) {
-                                file.isSelected = true;
-                            } else {
-                                file.isSelected = false;
-                            }
-                            return file;
-                        })
-                    });
-                }} onStart={()=>{setIsStarted(true)}} onReset={()=>setIsStarted(false)}></Aside>
-              {isStarted ?  <Content file={files.find(file => file.isSelected === true)} onChange={(value) => {
-
-                    setFiles(prev => {
-                        return prev.map(file => {
-                            if (file.isSelected) {
-                                file.content = value
-                            }
-                            return file;
+                <Aside
+                    files={files}
+                    onSelectFile={(fileId) => {
+                        setFiles(prev => {
+                            return prev.map(file => {
+                                if (file.id === fileId) {
+                                    file.isSelected = true;
+                                } else {
+                                    file.isSelected = false;
+                                }
+                                return file;
+                            })
                         });
-                    });
-                }} onSave={
-                    localStorage.setItem("app_create_content", JSON.stringify(files))
-                }></Content>:'Start new project'}
+                    }}
+                    onStart={handleOnStart}
+                    onReset={() => setIsStarted(false)}
+                ></Aside>
+                {isStarted ? <Content
+                    file={files.find(file => file.isSelected === true)}
+                    onChange={(value) => {
+
+                        setFiles(prev => {
+                            return prev.map(file => {
+                                if (file.isSelected) {
+                                    file.content = value
+                                }
+                                return file;
+                            });
+                        });
+                    }}
+                    onSave={
+                        localStorage.setItem("app_create_content", JSON.stringify(files))
+                    }></Content> : 'Start new project'}
             </div>
             <Footer></Footer>
         </div>
